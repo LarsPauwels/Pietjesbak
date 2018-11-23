@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#1A000000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gradientStart">#00AEFF</color>
+    <color name="gradientEnd">#6852FF</color>
+    <color name="blackOpacity">#1A000000</color>
+    <color name="black">#000000</color>
+    <color name="subtext">#7F7F7F</color>
+    <color name="colorTransparentWhite">#cccccc</color>
+    <color name="grayOpacity">#4D7F7F7F</color>
+    <color name="gameBackground">#014b32</color>
+    <color name="disabledButton">#707070</color>
+</resources>

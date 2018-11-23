@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/exit"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"/>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/futura_round_medium"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textSize="26.5dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/scrollInner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/first"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/single_player_background"
+                    app:riv_corner_radius="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/exo_medium"
+                    android:text="Single Player"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/play1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/first"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/blue_gradient"
+                    android:fontFamily="@font/futura_round_medium"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:textSize="19dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/second"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/single_player_background"
+                    app:riv_corner_radius="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/exo_medium"
+                    android:text="Single Player"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/play2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/second"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/blue_gradient"
+                    android:fontFamily="@font/futura_round_medium"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:textSize="19dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/third"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/single_player_background"
+                    app:riv_corner_radius="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/exo_medium"
+                    android:text="Single Player"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/play3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/third"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/blue_gradient"
+                    android:fontFamily="@font/futura_round_medium"
+                    android:text="PLAY"
+                    android:textColor="@color/white"
+                    android:textSize="19dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/types"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/futura_round_medium"
+        android:text="History"
+        android:textColor="@color/black"
+        android:textSize="26.5dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/history"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="19dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayOpacity" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="27dp"
+                        android:src="@drawable/coin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/coin"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/exo_medium"
+                        android:text="99"
+                        android:textColor="#F09900" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/titleGame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/win"
+                    android:drawablePadding="9dp"
+                    android:fontFamily="@font/exo_medium"
+                    android:text="Lars Pauwels VS Bobie"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleGame"
+                    android:layout_marginLeft="46dp"
+                    android:fontFamily="@font/exo_medium"
+                    android:text="21:42, May 16th"
+                    android:textSize="12dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user1"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/date"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/user_image" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user2"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/date"
+                    android:layout_alignLeft="@+id/user1"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/user_image" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/date"
+                    android:layout_alignLeft="@+id/user2"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/user_image" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="19dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayOpacity" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/coinA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="27dp"
+                        android:src="@drawable/coin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/coinA"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/exo_medium"
+                        android:text="99"
+                        android:textColor="#F09900" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/titleGameA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/lost"
+                    android:drawablePadding="9dp"
+                    android:fontFamily="@font/exo_medium"
+                    android:text="Lars Pauwels VS Bobie"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/dateA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleGameA"
+                    android:layout_marginLeft="46dp"
+                    android:fontFamily="@font/exo_medium"
+                    android:text="21:42, May 16th"
+                    android:textSize="12dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user1A"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/dateA"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/user_image" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user2A"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/dateA"
+                    android:layout_alignLeft="@+id/user1A"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/user_image" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/dateA"
+                    android:layout_alignLeft="@+id/user2A"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/user_image" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

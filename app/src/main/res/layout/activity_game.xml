@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gameBackground"
+    tools:context=".GameActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="160dp">
+
+        <ImageView
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/table" />
+
+        <RelativeLayout
+            android:layout_width="102dp"
+            android:layout_height="102dp"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/dice1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="30dp"
+                android:layout_toLeftOf="@+id/dice2"
+                android:src="@drawable/dice1" />
+
+            <ImageView
+                android:id="@+id/dice2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/dice1" />
+
+            <ImageView
+                android:id="@+id/dice3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:layout_toRightOf="@+id/dice2"
+                android:src="@drawable/dice1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="450dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <!-- Opponent container -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/opponentPoints"
+                    android:layout_width="120dp"
+                    android:layout_height="21dp"
+                    android:layout_alignStart="@+id/opponentImage"
+                    android:layout_alignBottom="@+id/opponentImage"
+                    android:layout_marginLeft="27.5dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/points"
+                    android:fontFamily="@font/exo_medium"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:text="120 Points"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/opponentUsername"
+                    android:layout_width="105dp"
+                    android:layout_height="21dp"
+                    android:layout_above="@+id/opponentPoints"
+                    android:layout_alignStart="@+id/opponentImage"
+                    android:layout_marginLeft="27.5dp"
+                    android:background="@drawable/username"
+                    android:fontFamily="@font/exo_medium"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:singleLine="true"
+                    android:text="Iklars"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/opponentImage"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/user_image" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/heart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="-18dp"
+                    android:layout_toStartOf="@+id/opponentImage"
+                    android:fontFamily="@font/exo_medium"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <!-- Your container-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/myScore"
+                    android:layout_width="120dp"
+                    android:layout_height="21dp"
+                    android:layout_alignStart="@+id/myImage"
+                    android:layout_alignBottom="@+id/myImage"
+                    android:layout_marginLeft="27.5dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/points"
+                    android:fontFamily="@font/exo_medium"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/myUsername"
+                    android:layout_width="105dp"
+                    android:layout_height="21dp"
+                    android:layout_above="@+id/myScore"
+                    android:layout_alignStart="@+id/myImage"
+                    android:layout_marginLeft="27.5dp"
+                    android:background="@drawable/username"
+                    android:fontFamily="@font/exo_medium"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/myImage"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/user_image" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/heart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="-18dp"
+                    android:layout_toStartOf="@+id/myImage"
+                    android:fontFamily="@font/exo_medium"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/playButtonsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/roll"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/blue_gradient"
+            android:fontFamily="@font/exo_medium"
+            android:gravity="center"
+            android:text="ROLL"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/roll"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/disabled_button"
+            android:enabled="false"
+            android:fontFamily="@font/exo_medium"
+            android:gravity="center"
+            android:text="STOP TURN"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/hide"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/stop"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_gradient"
+            android:fontFamily="@font/exo_medium"
+            android:gravity="center"
+            android:text="HIDE PLAYER INFO"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/rules"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/hide"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_gradient"
+            android:fontFamily="@font/exo_medium"
+            android:gravity="center"
+            android:text="GAME RULES"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/leave"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rules"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/red_gradient"
+            android:fontFamily="@font/exo_medium"
+            android:gravity="center"
+            android:text="LEAVE GAME"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
