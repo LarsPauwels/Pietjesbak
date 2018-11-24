@@ -8,7 +8,6 @@ import android.text.Html;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -113,6 +112,8 @@ public class RegisterActivity extends AppCompatActivity {
         final String username = tv_name.getText().toString().trim();
         final String email = tv_email.getText().toString().trim();
         final String password = tv_password.getText().toString().trim();
+        final int wins = 0;
+        final int plays = 0;
 
         if (TextUtils.isEmpty(username)) {
             // Username is empty
@@ -175,9 +176,10 @@ public class RegisterActivity extends AppCompatActivity {
                                                     // User is successfully registerd and logged in
                                                     User user = new User(
                                                             username,
-                                                            email
+                                                            email,
+                                                            wins,
+                                                            plays
                                                     );
-                                                    Log.d("test", "onComplete() returned: " + user);
 
                                                     FirebaseDatabase.getInstance().getReference("Users")
                                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -190,7 +192,10 @@ public class RegisterActivity extends AppCompatActivity {
 
                                                             if (task.isSuccessful()) {
                                                                 Toast.makeText(RegisterActivity.this, "You are successfully registerd.", Toast.LENGTH_SHORT).show();
+
+                                                                String sessionId = getIntent().getStringExtra("EXTRA_SESSION_ID");
                                                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                                                intent.putExtra("EXTRA_SESSION_ID", sessionId);
                                                                 startActivity(intent);
                                                             } else {
                                                                 Toast.makeText(RegisterActivity.this, "Could not register... please try again.", Toast.LENGTH_SHORT).show();
@@ -201,7 +206,7 @@ public class RegisterActivity extends AppCompatActivity {
                                                     loading.setVisibility(View.GONE);
                                                     btn_register.setVisibility(View.VISIBLE);
                                                     noAccount.setVisibility(View.VISIBLE);
-                                                    Toast.makeText(RegisterActivity.this, "Could not register... please try again.2", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(RegisterActivity.this, "Could not register... please try again.", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });

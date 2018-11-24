@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
     boolean isChecked = false;
     FirebaseAuth firebaseAuth;
+    String sessionId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        if (firebaseAuth.getCurrentUser() != null) {
+        if (firebaseAuth.getCurrentUser() != null && sessionId == "") {
             // Handle the already login user
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
         }

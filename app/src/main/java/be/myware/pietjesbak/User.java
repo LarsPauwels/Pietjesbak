@@ -3,14 +3,17 @@ package be.myware.pietjesbak;
 public class User {
 
     public String username, email;
+    public int wins, plays;
 
     public User() {
 
     }
 
-    public User(String username, String email) {
+    public User(String username, String email, int wins, int plays) {
         this.username = username;
         this.email = email;
+        this.wins = wins;
+        this.plays = plays;
     }
 
     public String getEmail() {
